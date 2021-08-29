@@ -25,15 +25,13 @@ Use for loop to go from range 0 to 'users choice'
 add value to new variable
 """
 
-letters_var = ""
-symbols_var = ""
-numbers_var = ""
+password = ""
 
 for m in range(0, nr_letters):
-    letters_var += letters[random.randint(0, len(letters) - 1)]
+    password += random.choice(letters)
 for n in range(0, nr_symbols):
-    symbols_var += symbols[random.randint(0, len(symbols) - 1)]
+    password += random.choice(symbols)
 for o in range(0, nr_numbers):
-    numbers_var += numbers[random.randint(0, len(numbers) - 1)]
+    password += random.choice(numbers)
 
-print(letters_var + symbols_var + numbers_var)
+print(password)
