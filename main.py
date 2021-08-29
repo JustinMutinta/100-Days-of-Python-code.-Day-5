@@ -1,19 +1,17 @@
 """
-Calculate the sum of all numbers between 1 to 100.
-create for loop to go through all numbers. Remember to end the range at 101
-Use if statement: if number is % 2 == 0, then add to sum_total
+Print numbers from 1 to 100.
+If the number is divisible by 3 then print Fizz instead of the number
+If the number is divisible by 5 then print Buzz instead of the number
+If the number is divisible by both then print FizzBuzz
 """
 
-sum_total = 0
 
 for m in range(1, 101):
-    if m % 2 == 0:
-        sum_total += m
-
-print(sum_total)
-
-sum_total = 0
-for n in range(2 , 101, 2):
-    sum_total += n
-
-print(sum_total)
+    if (m % 3 == 0) and (m % 5 == 0):
+        print("FizzBuzz")
+    elif(m % 3 == 0):
+        print("Fizz")
+    elif(m % 5 == 0):
+        print("Buzz")
+    else:
+        print(m)
