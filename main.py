@@ -1,17 +1,17 @@
-student_heights = input("Input a list of student heights ").split()
+"""
+For loop to find the largest value in a string of numbers
+Use a if statement to compare values. if the value in the list is higher, then its the bigger one
+"""
 
-for n in range(0, len(student_heights)):
-    student_heights[n] = int(student_heights[n])
+student_scores = input("Input a list of student scores: ").split()
 
-print(student_heights)
+for n in range(0, len(student_scores)):
+    student_scores[n] = int(student_scores[n])
 
-total_height = 0
+highest_value = 0
 
-for y in range(0, len(student_heights)):
-    total_height += student_heights[y]
+for m in range(0, len(student_scores)):
+    if highest_value < student_scores[m]:
+        highest_value = student_scores[m]
 
-print(total_height)
-
-average_height = total_height / len(student_heights)
-
-print(average_height)
+print(f"The highest value is {highest_value}")
