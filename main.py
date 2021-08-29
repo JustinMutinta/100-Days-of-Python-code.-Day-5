@@ -19,19 +19,24 @@ nr_letters = int(input("How many letters would you like in your password?\n"))
 nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
-"""
-Create variable to hold letters/numbers/symbols
-Use for loop to go from range 0 to 'users choice'
-add value to new variable
-"""
 
-password = ""
+password_list = []
 
 for m in range(0, nr_letters):
-    password += random.choice(letters)
+    password_list += random.choice(letters)
 for n in range(0, nr_symbols):
-    password += random.choice(symbols)
+    password_list += random.choice(symbols)
 for o in range(0, nr_numbers):
-    password += random.choice(numbers)
+    password_list += random.choice(numbers)
 
-print(password)
+print(password_list)  #See the values added the list
+
+random.shuffle(password_list) #shuffle the order of the list
+
+print(password_list)        #See the new list
+
+password = ""
+for char in password_list:
+    password += char
+
+print(f"Your password is {password}")
