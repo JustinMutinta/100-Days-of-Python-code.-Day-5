@@ -1,17 +1,19 @@
 """
-For loop to find the largest value in a string of numbers
-Use a if statement to compare values. if the value in the list is higher, then its the bigger one
+Calculate the sum of all numbers between 1 to 100.
+create for loop to go through all numbers. Remember to end the range at 101
+Use if statement: if number is % 2 == 0, then add to sum_total
 """
 
-student_scores = input("Input a list of student scores: ").split()
+sum_total = 0
 
-for n in range(0, len(student_scores)):
-    student_scores[n] = int(student_scores[n])
+for m in range(1, 101):
+    if m % 2 == 0:
+        sum_total += m
 
-highest_value = 0
+print(sum_total)
 
-for m in range(0, len(student_scores)):
-    if highest_value < student_scores[m]:
-        highest_value = student_scores[m]
+sum_total = 0
+for n in range(2 , 101, 2):
+    sum_total += n
 
-print(f"The highest value is {highest_value}")
+print(sum_total)
